@@ -1,14 +1,22 @@
-# Strong Node
+# Strong Node.js
 
-An exhaustive checklist to assist in the source code security analysis of a Node.js web service. It's focused in the server side, in particular, is targeting **[Express](http://expressjs.com/)** and **[Hapi](http://hapijs.com/)** environments.
+:muscle: Exhaustive checklist to assist in a security review of a [Node.js](https://nodejs.org) web service code. Focused on **[Express](http://expressjs.com)** and **[Hapi](http://hapijs.com)** environments.
 
-Next documents have been using as main references:
+The next documents have been using as main references:
 
 - The [SANS](https://www.sans.org/) SWAT (Securing Web Applications Technologies) [checklist](https://www.sans.org/security-resources/posters/securing-web-application-technologies-swat/60/download).
 - The CWE (Common Weakness Enumeration) [dictionary](http://cwe.mitre.org/).
 
->This text aims to be a continuous work in progress community based project. So please feel free to contribute. :)
+<div align="center">
+	<p>
+    <img src="https://cdn.pixabay.com/photo/2017/02/18/11/00/checklist-2077020_640.jpg" alt="checklist">
+	</p>
+	<p>
+		<sub>:gift: Ping me on <a href="https://twitter.com/jesusprubio"><code>Twitter</code></a> if you like this project</sub>
+	</p>
+</div>
 
+Related: :skull_and_crossbones: [Awesome Node.js for penetration testers](https://github.com/jesusprubio/awesome-nodejs-pentest)
 
 ## 1 Errors
 
@@ -81,8 +89,7 @@ Next documents have been using as main references:
 
 - Control all our errors, massaging them if needed to avoid the risks commented in these last points.
 - Use mature modules.
-- Use secure modules. ["nsp"](https://github.com/nodesecurity/nsp) allows you to automate the search of dependencies with known vulnerabilities. Add it to your development workflow.
-
+- Use secure modules. Add checks to your development workflow with a tool like [audit-ci](https://github.com/IBM/audit-ci) or [auditjs](https://github.com/OSSIndex/auditjs).
 
 ## 2 Input and output
 
@@ -547,7 +554,7 @@ The basic idea is to use a secure method (random and enough length) to generate 
 
 ### **7.3 Check for dependencies with known vulnerabilities** is included in the CI
 
-["nsp"](https://github.com/nodesecurity/nsp) automates it for you.
+Tools like [audit-ci](https://github.com/IBM/audit-ci) or [auditjs](https://github.com/OSSIndex/auditjs) help with this.
 
 ### **7.4 Check for non updated dependencies** is included in the CI
 
@@ -619,10 +626,6 @@ Apply this methodology ;).
 
 ## License
 
-[<img src="http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.eu.png" height="40" alt="CC BY-NC SA 3.0">](https://creativecommons.org/licenses/by-nc-sa/3.0/)
+[![Creative Commons License](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](http://creativecommons.org/licenses/by/4.0)
 
-### Author
-
-- Jesús Pérez
-- jesusprubio@fsf.org
-- [@jesusprubio](https://twitter.com/jesusprubio)
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0)
